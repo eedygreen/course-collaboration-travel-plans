@@ -5,7 +5,9 @@ pipeline {
       agent {
         docker {
           image 'ubuntu'
-          args '-p 3000:3000'
+          args '''sudo chown root:jenkins run/docker.soc
+-p 3000:3000
+'''
         }
 
       }
